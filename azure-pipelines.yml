@@ -7,7 +7,10 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  #vmImage: ubuntu-latest
+  name: testPool
+  demands:
+  - agent.name -equeals OfficeDELL
 
 steps:
 - task: NodeTool@0
